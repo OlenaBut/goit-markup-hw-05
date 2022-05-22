@@ -194,8 +194,7 @@ h2 {
 
 .header-icon {
     margin-right: 10px;
-    fill: var(--primary-text-color);
-    transition: fill 250ms var(--timing-function);
+    fill: currentColor;
 }
 
 .header-icon:hover,
@@ -585,13 +584,14 @@ h2 {
     width: 100%;
     height: 100%;
     opacity: 1;
-    transition: opacity 250ms var(--timing-function);
+    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
     background-color: rgba(47, 48, 58, 0.5);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
 
 .backdrop.is-hidden .modal{
@@ -683,6 +683,7 @@ h2 {
     min-width: 73px;
     height: 38px;
     cursor: pointer;
+    border: none;
     transition: box-shadow 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
@@ -697,9 +698,6 @@ h2 {
 .filters-btn-secondary {
     display: inline-block;
     padding: 6px 22px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     border-color: var(--accent-color);
     color: var(--secondary-color);
@@ -712,6 +710,7 @@ h2 {
     min-width: 73px;
     height: 38px;
     cursor: pointer;
+    border: none;
     transition: box-shadow 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
@@ -719,8 +718,7 @@ h2 {
 .filters-btn-secondary:focus {
     color: var(--simply-white);
     background-color: var(--accent-color);
-    border-color: transparent;
-    box-shadow: none;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*work list*/
@@ -735,6 +733,7 @@ h2 {
 
 .work-overlay {
     display: block;
+    text-decoration: none;
     transition: box-shadow 250ms var(--timing-function);
 }
 
